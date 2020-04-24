@@ -2,8 +2,8 @@ project "ImGui"
 	kind "StaticLib"
 	language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir (workdir .. "/bin/" .. outdir .. "/%{prj.name}")
+	objdir (workdir .. "/obj/" .. outdir .. "/%{prj.name}")
 
 	files
 	{
@@ -30,4 +30,4 @@ project "ImGui"
 
 	filter "configurations:Release"
 		runtime "Release"
-		optimize "speed"
+		optimize "on"
